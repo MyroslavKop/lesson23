@@ -12,7 +12,7 @@ const ImagesList = () => {
         fetch(`https://picsum.photos/v2/list?page=${page}&limit=10`)
         .then(response => response.json())
         .then((result) => {
-            setImages(images.concat(result));
+            setImages(prevImages => [...prevImages, ...result]);
             setLoading(false);
         });
     }, [page]);
@@ -29,7 +29,7 @@ const ImagesList = () => {
                 ))}
             </div>
             {isLoading ? <Spinner animation="border" variant="primary"/> :
-                <Button variant="primary" onClick={handleClick}>SHOW MORE</Button>}
+                <Button variant="primary" onClick={handleClick} style={{textTransform: "uppercase"}}>show more</Button>}
         </>
     );
 };
