@@ -43,3 +43,6 @@ img {
     -moz-box-shadow: -3px 2px 24px -7px rgba(0, 0, 0, 0.75);
     box-shadow: -3px 2px 24px -7px rgba(0, 0, 0, 0.75);
 }
+.list_btn {
+    text-transform: uppercase;
+}

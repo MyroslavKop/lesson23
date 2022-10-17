@@ -29,7 +29,7 @@ const ImagesList = () => {
                 ))}
             </div>
             {isLoading ? <Spinner animation="border" variant="primary"/> :
-                <Button variant="primary" onClick={handleClick} style={{textTransform: "uppercase"}}>show more</Button>}
+                <Button variant="primary" onClick={handleClick} className="list_btn">show more</Button>}
         </>
     );
 };
